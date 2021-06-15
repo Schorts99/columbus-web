@@ -40,7 +40,7 @@ export default function CartPage() {
   }, []);
 
   function removeItemFromCart(id: string) {
-    const newProducts = products.filter((product) => product.id !== id);
+    const newProducts = products.filter((product) => product.attributes.product.id !== id);
 
     setProducts(newProducts);
   }
