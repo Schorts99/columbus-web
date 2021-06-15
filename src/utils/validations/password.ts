@@ -1,5 +1,3 @@
-const PASSWORD_PATTERN = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
-
 type passwordValidationErrors = {
   required: string,
   format: string,
