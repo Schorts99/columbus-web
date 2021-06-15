@@ -1,0 +1,14 @@
+{
+  "title": "Ingresar",
+  "banner_alt": "Persona revisando sus ganancias",
+  "email_required_error": "Necesitamos tu correo electrónico",
+  "email_pattern_error": "Ingresa un correo electrónico válido",
+  "password_required_error": "Necesitamos tu contraseña",
+  "password_format_error": "El correo electrónico y/o la contraseña no coinciden con ninguna cuenta registrada",
+  "email": "Correo electrónico",
+  "email_placeholder": "elon@spacex.com",
+  "password": "Contraseña",
+  "password_placeholder": "*********",
+  "submit": "Ingresar",
+  "sign_up": "¿No tienes una cuenta? Regístrate"
+}

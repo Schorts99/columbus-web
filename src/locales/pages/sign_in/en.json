@@ -1,0 +1,14 @@
+{
+  "title": "Sign In",
+  "banner_alt": "Person checking his earnings",
+  "email_required_error": "Youre email is required",
+  "email_pattern_error": "Please enter a valid email",
+  "password_required_error": "Youre password is required",
+  "password_format_error": "Email and/or password do not match any registered account",
+  "email": "Email",
+  "email_placeholder": "elon@spacex.com",
+  "password": "Password",
+  "password_placeholder": "*********",
+  "submit": "Sign In",
+  "sign_up": "Don't have an account? Sign up"
+}

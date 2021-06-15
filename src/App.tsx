@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import UserContext from './contexts/User';
+import Loading from './pages/Loading';
+import SignUp from './pages/SignUp';
+import Route from './components/Route';
+import Home from './pages/Home';
+import Layout from './layouts';
+import SignIn from './pages/SignIn';
+import Cart from './pages/Cart';
+import Success from './pages/Success';
 
 function App() {
+  const { loadingCurrentUser } = useContext(UserContext);
+
+  if (loadingCurrentUser) {
+    return <Loading />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Route exact path="/" policy="all" authChildren={<Home />}>
+          <SignUp />
+        </Route>
+        <Route exact path="/sign-in" policy="only-not-auth">
+          <SignIn />
+        </Route>
+        <Route exact path="/cart" policy="only-customer">
+          <Cart />
+        </Route>
+        <Route exact path="/success" policy="only-customer">
+          <Success />
+        </Route>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,5 @@
+{
+  "title": "Inicio",
+  "error": "Hubo un error al hacer fetch de los productos",
+  "load_more": "Cargar más"
+}
