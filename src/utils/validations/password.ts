@@ -13,7 +13,7 @@ export default function passwordValidation(
     return errors.required;
   }
 
-  if (!PASSWORD_PATTERN.test(value)) {
+  if (value.length < 6 || value.length > 20) {
     return errors.format;
   }
 
